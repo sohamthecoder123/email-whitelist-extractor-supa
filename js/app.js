@@ -1,3 +1,4 @@
+//pls
 import { signIn, getUser, isAuthorized, signOut } from "./auth.js";
 
 console.log("app.js loaded");
