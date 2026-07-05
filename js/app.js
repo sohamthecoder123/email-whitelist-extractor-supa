@@ -1,4 +1,4 @@
-import { signIn } from "./auth.js";
+import { signIn, getUser } from "./auth.js";
 
 const loginButton = document.getElementById("loginBtn");
 const emailInput = document.getElementById("email");
@@ -30,3 +30,9 @@ loginButton.addEventListener("click", async () => {
         "Check your email for the sign-in link.";
 
 });
+
+const user = await getUser();
+
+if (user) {
+    status.textContent = `Logged in as ${user.email}`;
+}

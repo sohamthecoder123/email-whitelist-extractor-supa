@@ -11,3 +11,17 @@ export async function signIn(email){
 
     return error;
 }
+
+export async function getUser() {
+    const { data, error } = await supabase.auth.getUser();
+
+    if (error) {
+        return null;
+    }
+
+    return data.user;
+}
+
+export async function signOut() {
+    await supabase.auth.signOut();
+}
