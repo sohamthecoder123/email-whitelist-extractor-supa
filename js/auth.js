@@ -26,8 +26,13 @@ export async function signOut() {
     await supabase.auth.signOut();
 }
 
-export async function isAuthorized(){
-    const { data, error } = await supabase.from('authorized_users').select();
+export async function isAuthorized() {
+    const { data, error } = await supabase
+        .from("authorized_users")
+        .select();
+
+    console.log("Data:", data);
+    console.log("Error:", error);
 
     if (error) {
         throw error;

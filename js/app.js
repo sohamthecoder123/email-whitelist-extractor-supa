@@ -36,6 +36,7 @@ loginButton.addEventListener("click", async () => {
 });
 
 const user = await getUser();
+console.log(user);
 
 if (user) {
     status.textContent = `Logged in as ${user.email}`;
