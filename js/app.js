@@ -1,3 +1,4 @@
+//please build you stupid b-
 import { signIn, getUser } from "./auth.js";
 
 const loginButton = document.getElementById("loginBtn");
