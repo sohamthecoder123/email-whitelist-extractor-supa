@@ -1,4 +1,4 @@
-//please build you stupid b-
+//please build you stupid bi
 import { signIn, getUser, isAuthorized, signOut } from "./auth.js";
 
 console.log("app.js loaded");
