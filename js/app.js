@@ -1,9 +1,13 @@
 //please build you stupid b-
 import { signIn, getUser, isAuthorized, signOut } from "./auth.js";
 
+console.log("app.js loaded");
+
 const loginButton = document.getElementById("loginBtn");
 const emailInput = document.getElementById("email");
 const status = document.getElementById("status");
+
+console.log(loginButton);
 
 loginButton.addEventListener("click", async () => {
 
