@@ -25,3 +25,13 @@ export async function getUser() {
 export async function signOut() {
     await supabase.auth.signOut();
 }
+
+export async function isAuthorized(){
+    const { data, error } = await supabase.from('authorized_users').select();
+
+    if (error) {
+        throw error;
+    }
+
+    return data.length === 1;
+}
