@@ -1,4 +1,3 @@
-//please build you stupid b
 import { signIn, getUser, isAuthorized, signOut } from "./auth.js";
 
 console.log("app.js loaded");
