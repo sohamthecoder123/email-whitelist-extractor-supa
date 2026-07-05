@@ -1,5 +1,11 @@
 //pls
-import { signIn, getUser, isAuthorized, signOut } from "./auth.js";
+import { 
+    signIn, 
+    getUser, 
+    isAuthorized, 
+    signOut, 
+    getProtectedPage 
+} from "./auth.js";
 
 console.log("app.js loaded");
 
@@ -45,7 +51,10 @@ if (user) {
     const authorized = await isAuthorized();
 
     if (authorized) {
-        document.getElementById("protected").hidden = false;
+        const html = await getProtectedPage("home");
+        const protectedDiv = document.getElementById("protected");
+        protectedDiv.innerHTML = html;
+        protectedDiv.hidden = false;
 
         status.textContent += " (Authorized)";
     } else {

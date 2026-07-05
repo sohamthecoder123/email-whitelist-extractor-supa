@@ -40,3 +40,17 @@ export async function isAuthorized() {
 
     return data.length === 1;
 }
+
+export async function getProtectedPage(page) {
+    const { data, error } = await supabase
+        .from("protected_pages")
+        .select("content")
+        .eq("page", page)
+        .single();
+
+    if (error) {
+        throw error;
+    }
+
+    return data.content;
+}
