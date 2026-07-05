@@ -1,5 +1,5 @@
 //please build you stupid b-
-import { signIn, getUser, isAuthorized } from "./auth.js";
+import { signIn, getUser, isAuthorized, signOut } from "./auth.js";
 
 const loginButton = document.getElementById("loginBtn");
 const emailInput = document.getElementById("email");
@@ -47,3 +47,10 @@ if (user) {
         status.textContent += " (Not Authorized)";
     }
 }
+
+const logoutBtn = document.getElementById("logoutBtn");
+
+logoutBtn.addEventListener("click", async () => {
+    await signOut();
+    location.reload();
+});
