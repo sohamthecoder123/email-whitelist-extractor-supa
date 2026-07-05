@@ -43,7 +43,7 @@ if (user) {
     const authorized = await isAuthorized();
 
     if (authorized) {
-        document.getElementById("protected").hidden = "false";
+        document.getElementById("protected").hidden = false;
 
         status.textContent += " (Authorized)";
     } else {
