@@ -1,19 +1,26 @@
 <!DOCTYPE html> 
-<html>
-    <head>
-        <title>
-            title
-        </title>
-    </head>
-    <body>
-        <label for="fname">Email:</label><br>
-        <input type="text" id="email" name="email"><br>
-        <button type="button" id="enter">Enter Email</button>
-        <p id="status"></p>
-        <button type="button" id="logout" hidden>Sign Out</button>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Email Whitelist Demo</title>
+</head>
+<body>
 
-        <script type="module" src="js/app.js"></script>
-    </body> 
+    <h1>Protected Website</h1>
+
+    <input
+        id="email"
+        type="email"
+        placeholder="Enter your email"
+    >
+
+    <button id="loginBtn">
+        Send Magic Link
+    </button>
+
+    <p id="status"></p>
+
+    <script type="module" src="./js/app.js"></script>
+
+</body>
 </html>
-
-<!--  -->
